@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Secrets of Health, Beauty, and Youth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fcfbf9;
+      --text-dark: #2c3e2c; /* Էլեգանտ մուգ կանաչ */
+      --text-light: #6b7c6b;
+      --gold-accent: #c9a961;
+      --white: #ffffff;
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(44, 62, 44, 0.4), rgba(44, 62, 44, 0.6)), 
+                  url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 12px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold-accent);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      max-width: 800px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      font-weight: 300;
+      max-width: 600px;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+
+    .btn-luxury {
+      padding: 16px 40px;
+      background: transparent;
+      border: 1px solid var(--gold-accent);
+      color: var(--gold-accent);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+    }
+
+    .btn-luxury:hover {
+      background: var(--gold-accent);
+      color: var(--text-dark);
+    }
+
+    /* Pillars Section */
+    .pillars {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 400;
+      margin-bottom: 60px;
+      color: var(--text-dark);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      padding: 40px 30px;
+      border: 1px solid rgba(201, 169, 97, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      border-color: var(--gold-accent);
+    }
+
+    .pillar-icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--gold-accent);
+    }
+
+    .pillar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+
+    .pillar-text {
+      font-size: 14px;
+      color: var(--text-light);
+      font-weight: 300;
+    }
+
+    /* Secrets Section */
+    .secrets {
+      background-color: #f4f1ea;
+      padding: 100px 20px;
+    }
+
+    .secrets-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .secret-item {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+      align-items: flex-start;
+    }
+
+    .secret-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      color: var(--gold-accent);
+      font-weight: 600;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .secret-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .secret-content p {
+      font-size: 15px;
+      color: var(--text-light);
+      font-weight: 300;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 42px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .secret-item { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <p class="hero-subtitle">Premium Wellness & Aesthetics</p>
+    <h1 class="hero-title">Առողջության, Գեղեցկության և Երիտասարդության Գաղտնիքները</h1>
+    <p class="hero-desc">
+      Բացահայտեք ներդաշնակության արվեստը։ Մենք կիսվում ենք ժամանակով փորձարկված, գիտականորեն հիմնավորված մեթոդներով՝ ձեր բնական փայլը պահպանելու համար։
+    </p>
+    <a href="#pillars" class="btn-luxury">Բացահայտել ավելին</a>
+  </header>
+
+  <!-- 3 Pillars Section -->
+  <section id="pillars" class="pillars">
+    <h2 class="section-title">Երեք Հիմնասյուները</h2>
+    <div class="pillars-grid">
+      
+      <div class="pillar-card">
+        <div class="pillar-icon">🌿</div>
+        <h3 class="pillar-title">Առողջություն</h3>
+        <p class="pillar-text">
+          Իսկական գեղեցկությունը սկսվում է ներսից։ Հավասարակշռված սնուցումը, ջրային ռեժիմը և հոգեկան հանգստությունը հիմքն են երկարակեցության։
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">✨</div>
+        <h3 class="pillar-title">Գեղեցկություն</h3>
+        <p class="pillar-text">
+          Մաշկի խնամքը որպես ռիտուալ, ոչ թե պարտականություն։ Բնական բաղադրիչներ և նուրբ խնամք՝ ձեր մաշկի բնական փայլը ընդգծելու համար։
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">⏳</div>
+        <h3 class="pillar-title">Երիտասարդություն</h3>
+        <p class="pillar-text">
+          Ժամանակը կանգնեցնել անհնար է, բայց դանդաղեցնել այն՝ իրատեսական։ Կանխարգելիչ խնամք և առողջ ապրելակերպ՝ երիտասարդությունը պահպանելու համար։
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Secrets Section -->
+  <section class="secrets">
+    <div class="secrets-container">
+      <h2 class="section-title" style="text-align: center;">Ոսկե Կանոններ</h2>
+      
+      <div class="secret-item">
+        <div class="secret-number">01</div>
+        <div class="secret-content">
+          <h3>Քունը՝ որպես գեղեցկության էլիքսիր</h3>
+          <p>Գիշերային 7-8 ժամ որակյալ քունը թույլ է տալիս մարմնին վերականգնվել, իսկ մաշկին՝ արտադրել կոլագեն, որը պատասխանատու է առաձգականության համար։</p>
+        </div>
+      </div>
+
+      <div class="secret-item">
+        <div class="secret-number">02</div>
+        <div class="secret-content">
+          <h3>Հակաօքսիդանտների ուժը</h3>
+          <p>Ձեր սննդակարգում ներառեք հատապտուղներ, կանաչ թեյ և մուգ կանաչ բանջարեղեն։ Նրանք պայքարում են ազատ ռադիկալների դեմ և դանդաղեցնում ծերացման գործընթացը։</p>
+        </div>
+      </div>
+
+      <div class="secret-item">
+        <div class="secret-number">03</div>
+        <div class="secret-content">
+          <h3>Սթրեսի կառավարում</h3>
+          <p>Մեդիտացիան, յոգան կամ պարզապես բնության գրկում զբոսանքը նվազեցնում են կորտիզոլի մակարդակը, ինչը ուղղակիորեն ազդում է դեմքի գույնի և ընդհանուր տոնուսի վրա։</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 The Secrets of Health, Beauty, and Youth. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
