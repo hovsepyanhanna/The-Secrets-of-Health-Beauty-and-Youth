@@ -138,6 +138,77 @@
       font-weight: 300;
     }
 
+    /* --- NEW: Video Section --- */
+    .video-section {
+      padding: 80px 20px;
+      background-color: #f4f1ea;
+      text-align: center;
+    }
+
+    .video-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      border: 1px solid rgba(201, 169, 97, 0.3);
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-caption {
+      margin-top: 25px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: var(--text-dark);
+      font-style: italic;
+    }
+
+    /* --- NEW: Beauty Rituals Section --- */
+    .beauty-rituals {
+      padding: 100px 20px;
+      background-color: var(--white);
+    }
+
+    .rituals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ritual-card {
+      padding: 35px 30px;
+      background: var(--bg-color);
+      border-left: 3px solid var(--gold-accent);
+      transition: all 0.3s ease;
+    }
+
+    .ritual-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    }
+
+    .ritual-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+
+    .ritual-text {
+      font-size: 14px;
+      color: var(--text-light);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
     /* Secrets Section */
     .secrets {
       background-color: #f4f1ea;
@@ -193,6 +264,7 @@
       .hero-title { font-size: 42px; }
       .pillars-grid { grid-template-columns: 1fr; }
       .secret-item { flex-direction: column; gap: 10px; }
+      .section-title { font-size: 36px; }
     }
   </style>
 </head>
@@ -234,6 +306,55 @@
         <h3 class="pillar-title">Youth</h3>
         <p class="pillar-text">
           Stopping time is impossible, but slowing it down is realistic. Preventative care and a holistic lifestyle are the keys to preserving timeless youthfulness.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEW: Video Section -->
+  <section class="video-section">
+    <h2 class="section-title">The Art of Self-Care</h2>
+    <div class="video-wrapper">
+      <!-- Այս վիդեոն անվճար, բարձր որակի Pexels-ից է։ Կարող եք փոխել src-ը ձեր սեփական վիդեոյով -->
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80">
+        <source src="https://videos.pexels.com/video-files/5377983/5377983-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="video-caption">"Beauty is not about masking flaws, but revealing your natural light."</p>
+  </section>
+
+  <!-- NEW: Beauty Rituals Section -->
+  <section class="beauty-rituals">
+    <h2 class="section-title" style="text-align: center;">Expert Beauty Rituals</h2>
+    <div class="rituals-grid">
+      
+      <div class="ritual-card">
+        <h3 class="ritual-title">Double Cleansing Method</h3>
+        <p class="ritual-text">
+          Start with an oil-based cleanser to dissolve makeup and SPF, followed by a gentle water-based foam. This two-step process ensures deeply clean pores without stripping the skin's natural moisture barrier.
+        </p>
+      </div>
+
+      <div class="ritual-card">
+        <h3 class="ritual-title">Facial Massage & Gua Sha</h3>
+        <p class="ritual-text">
+          Spend 3 minutes daily massaging your face with a jade roller or Gua Sha tool. This stimulates lymphatic drainage, reduces morning puffiness, and promotes a natural, sculpted contour.
+        </p>
+      </div>
+
+      <div class="ritual-card">
+        <h3 class="ritual-title">The Golden Rule of SPF</h3>
+        <p class="ritual-text">
+          Up to 80% of visible skin aging is caused by UV exposure. Apply a broad-spectrum SPF 30+ every single day, even when it's cloudy or you are indoors near windows.
+        </p>
+      </div>
+
+      <div class="ritual-card">
+        <h3 class="ritual-title">Hydration from Inside Out</h3>
+        <p class="ritual-text">
+          Topical creams can only do so much. Drink at least 2 liters of water daily, enriched with a squeeze of lemon or cucumber slices to support cellular hydration and skin elasticity.
         </p>
       </div>
 
